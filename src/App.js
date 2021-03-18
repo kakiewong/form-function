@@ -1,10 +1,14 @@
 import './App.css';
+import { ContextProvider } from './ContextProvider'
+import Header from './Components/Header/Header'
 
 function App() {
   return (
-    <div className="App">
-
-    </div>
+    <ContextProvider>
+      <div className="App">
+        <Header />
+      </div>
+    </ContextProvider>
   );
 }
 
