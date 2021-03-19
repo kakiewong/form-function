@@ -1,13 +1,17 @@
 import React, { useContext } from 'react'
 import { AppContext } from '../../ContextProvider'
+import './Header.css'
 
 function Header() {
-    const { products } = useContext(AppContext)
-    const bath = products.filter(item => item.category === 'bath')
+    const { cartCount } = useContext(AppContext)
 
     return (
-        <div>
-            <h1>hello</h1>
+        <div id='header'>
+            <h1>FORM &amp; FUNCTION</h1>
+            <div id='cart'>
+                <p>{cartCount}</p>
+                <button><i className="im im-shopping-cart"></i></button>
+            </div>
         </div>
     )
 

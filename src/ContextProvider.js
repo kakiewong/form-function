@@ -48,6 +48,7 @@ export const AppContext = createContext();
 
 export function ContextProvider({ children }) {
     const [cart, setCart] = useState([]);
+    const [cartCount, setCartCount] = useState(0)
     const products = [
         {
             name: 'Set of Two Dexter Metal Frames',
@@ -461,7 +462,9 @@ export function ContextProvider({ children }) {
 
     return (
         <AppContext.Provider value={{
-            products: products
+            products: products,
+            cart: cart,
+            cartCount: cartCount
         }}>
             {children}
         </AppContext.Provider>
