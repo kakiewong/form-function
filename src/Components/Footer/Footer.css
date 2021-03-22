@@ -1,0 +1,29 @@
+.footer {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 70px;
+    background-color: #707070;
+}
+
+.footer > h2 {
+    margin-left: 10px;
+}
+
+.footerLinks{
+    display:flex;
+    gap: 60px;
+    font-size: 0.8rem;
+    list-style: none;
+}
+
+.footerLinks:hover{
+    cursor: default;
+}
+
+.socialIcons {
+    display: flex;
+    width: 200px;
+    justify-content: space-evenly;
+}

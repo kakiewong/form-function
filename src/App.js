@@ -3,6 +3,8 @@ import { ContextProvider } from './ContextProvider'
 import Header from './Components/Header/Header'
 import Nav from './Components/Nav/Nav'
 import Showcase from './Components/Showcase/Showcase'
+import Footer from './Components/Footer/Footer'
+
 
 function App() {
   return (
@@ -11,6 +13,7 @@ function App() {
         <Header />
         <Nav />
         <Showcase />
+        <Footer />
       </div>
     </ContextProvider>
   );
