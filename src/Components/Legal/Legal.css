@@ -1,0 +1,8 @@
+.legal{
+    width:100%;
+    height:100vh;
+}
+
+.legal > h1{
+    text-align: center;
+}
