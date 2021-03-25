@@ -18,12 +18,21 @@
     width:720px;
     height:520px;
   }
-
-  .hero img {
-      width:100%;
-      height:100%;
-  }
   
+  .mainText{
+    margin-left: 80%;
+  }
+
+  .subText{
+   width:100px;
+   padding:0 5px;
+   background-color: rgba(112, 112, 112,70%);
+  }
+
+  .mainText > h1 {
+    margin-bottom: 10px;
+  }
+
   .sub{
     display:flex;
     flex-direction: column;
@@ -53,32 +62,17 @@
     height:255px;
   }
 
-  .pic1 > img {
-    width:100%;
-    height:100%;
-  }
-  .pic2 > img {
-    width:100%;
-    height:100%;
-  }
-  .pic3 > img {
-    width:100%;
-    height:100%;
-  }
-  .pic4 > img {
-    width:100%;
-    height:100%;
-  }
-
   .rotatingFeature{
     width:1200px;
     height:700px;
     margin-bottom: 30px;
+    text-align: center;
   }
 
-  .rotatingFeature > img{
-      width:100%;
-      height:100%;
+  .rotatingFeature > h1 {
+    padding-top: 30px;
+    font-size: 3rem;
+    letter-spacing: 2px;
   }
 
   .social{
