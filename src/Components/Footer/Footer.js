@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import './Footer.css'
 
 function Footer() {
@@ -6,9 +7,12 @@ function Footer() {
         <div className='footer'>
             <h2>FORM &amp; FUNCTION</h2>
             <ul className='footerLinks'>
-                <li>About Us</li>
-                <li>Corporate Policy</li>
-                <li>Careers</li>
+                <Link className='link' to="/about">
+                    <li>About Us</li>
+                </Link>
+                <Link className='link' to="/careers">
+                    <li>Careers</li>
+                </Link>
             </ul>
             <div className='socialIcons'>
                 <i className="im im-instagram"></i>
