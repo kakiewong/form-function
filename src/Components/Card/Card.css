@@ -1,0 +1,18 @@
+.card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width:300px;
+    height:300px;
+    text-align: center;
+}
+
+.mainPic {
+    width: 70%;
+    height: 70%;
+}
+
+.card > p {
+    justify-self: start ;
+}
+

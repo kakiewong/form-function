@@ -41,7 +41,11 @@ import demar1 from './FurniturePhotos/Living/wells.jpg'
 import demar2 from './FurniturePhotos/Living/wellsModal.jpg'
 import pascal1 from './FurniturePhotos/Living/snow.jpg'
 import pascal2 from './FurniturePhotos/Living/snowModal.jpg'
-
+import livingSplash from './FurniturePhotos/livingSplash.jpg'
+import diningSplash from './FurniturePhotos/diningSplash.jpg'
+import bedSplash from './FurniturePhotos/bedSplash.jpg'
+import bathSplash from './FurniturePhotos/bathSplash.jpg'
+import accSplash from './FurniturePhotos/accSplash.jpg'
 
 
 export const AppContext = createContext();
@@ -49,6 +53,7 @@ export const AppContext = createContext();
 export function ContextProvider({ children }) {
     const [cart, setCart] = useState([]);
     const [cartCount, setCartCount] = useState(0)
+
     const products = [
         {
             name: 'Set of Two Dexter Metal Frames',
@@ -460,11 +465,35 @@ export function ContextProvider({ children }) {
         }
     ]
 
+    const splash = [
+        {
+            category: "living",
+            img: livingSplash
+        },
+        {
+            category: "dining",
+            img: diningSplash
+        },
+        {
+            category: "bed",
+            img: bedSplash
+        },
+        {
+            category: "bath",
+            img: bathSplash
+        },
+        {
+            category: "accessories",
+            img: accSplash
+        }
+    ]
+
     return (
         <AppContext.Provider value={{
             products: products,
             cart: cart,
-            cartCount: cartCount
+            cartCount: cartCount,
+            splash: splash
         }}>
             {children}
         </AppContext.Provider>
