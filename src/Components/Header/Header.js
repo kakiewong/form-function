@@ -21,12 +21,20 @@ function Header() {
                 <button onClick={handleClick}><i className="im im-shopping-cart"></i></button>
             </div>
             <div className={toggleCart ? "cartContent" : "hide"}>
-                {cart.map(item =>
-                    <CartItems
-                        name={item.name}
-                        price={item.price}
-                    />
-                )}
+                <h3>Your Shopping Cart</h3>
+                {cart.length > 0
+                    ? cart.map(item =>
+                        <CartItems
+                            key={item.id}
+                            id={item.id}
+                            name={item.name}
+                            price={item.price}
+                            image={item.img.splash}
+                            quantity={item.quantity}
+                        />
+                    )
+                    : <p>Your cart is empty</p>
+                }
             </div>
         </div>
     )

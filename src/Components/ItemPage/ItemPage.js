@@ -7,7 +7,7 @@ function ItemPage() {
     const [currentItem, setCurrentItem] = useState({})
     const [loading, setLoading] = useState(true)
     let { sku } = useParams()
-    let { products, cart, setCart, cartCount, setCartCount } = useContext(AppContext)
+    let { products, cart, setCart } = useContext(AppContext)
 
     useEffect(() => {
         setCurrentItem(products.find(item => item.id === sku))
@@ -15,10 +15,18 @@ function ItemPage() {
     }, [])
 
     const addCart = () => {
-        setCart([
-            ...cart,
-            currentItem
-        ])
+        const isInCart = cart.find(item => item.id === currentItem.id)
+        if (isInCart) {
+            setCart(cart.map(item => item.id === currentItem.id ? { ...item, quantity: item.quantity += 1 } : item))
+        } else {
+            setCart([
+                ...cart,
+                {
+                    ...currentItem,
+                    quantity: 1
+                }
+            ])
+        }
     }
 
     if (!loading) {

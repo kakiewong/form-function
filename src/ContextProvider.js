@@ -70,6 +70,7 @@ export function ContextProvider({ children }) {
                 diameter: ''
             },
             id: '154316',
+            quantity: 0,
             category: 'accessories'
         },
         {
@@ -87,6 +88,7 @@ export function ContextProvider({ children }) {
                 diameter: '12.25"'
             },
             id: '593327',
+            quantity: 0,
             category: 'accessories'
         },
         {
@@ -104,6 +106,7 @@ export function ContextProvider({ children }) {
                 diameter: '9.5"'
             },
             id: '627800',
+            quantity: 0,
             category: 'accessories'
         },
         {
@@ -121,6 +124,7 @@ export function ContextProvider({ children }) {
                 diameter: ''
             },
             id: '195411',
+            quantity: 0,
             category: 'accessories'
         },
         {
@@ -138,6 +142,7 @@ export function ContextProvider({ children }) {
                 diameter: ''
             },
             id: '198977',
+            quantity: 0,
             category: 'bath'
         },
         {
@@ -155,6 +160,7 @@ export function ContextProvider({ children }) {
                 diameter: ''
             },
             id: '161685',
+            quantity: 0,
             category: 'bath'
         },
         {
@@ -172,6 +178,7 @@ export function ContextProvider({ children }) {
                 diameter: ''
             },
             id: '284144',
+            quantity: 0,
             category: 'bath'
         },
         {
@@ -189,6 +196,7 @@ export function ContextProvider({ children }) {
                 diameter: ''
             },
             id: '102841',
+            quantity: 0,
             category: 'bath'
         },
         {
@@ -206,6 +214,7 @@ export function ContextProvider({ children }) {
                 diameter: ''
             },
             id: '686059',
+            quantity: 0,
             category: 'bed'
         },
         {
@@ -223,6 +232,7 @@ export function ContextProvider({ children }) {
                 diameter: ''
             },
             id: '604352',
+            quantity: 0,
             category: 'bed'
         },
         {
@@ -240,6 +250,7 @@ export function ContextProvider({ children }) {
                 diameter: ''
             },
             id: '130086',
+            quantity: 0,
             category: 'bed'
         },
         {
@@ -257,6 +268,7 @@ export function ContextProvider({ children }) {
                 diameter: ''
             },
             id: '521118',
+            quantity: 0,
             category: 'bed'
         },
         {
@@ -274,6 +286,7 @@ export function ContextProvider({ children }) {
                 diameter: ''
             },
             id: '563782',
+            quantity: 0,
             category: 'bed'
         },
         {
@@ -291,6 +304,7 @@ export function ContextProvider({ children }) {
                 diameter: ''
             },
             id: '108976',
+            quantity: 0,
             category: 'dining'
         },
         {
@@ -308,6 +322,7 @@ export function ContextProvider({ children }) {
                 diameter: ''
             },
             id: '445913',
+            quantity: 0,
             category: 'dining'
         },
         {
@@ -325,6 +340,7 @@ export function ContextProvider({ children }) {
                 diameter: ''
             },
             id: '687213',
+            quantity: 0,
             category: 'dining'
         },
         {
@@ -342,6 +358,7 @@ export function ContextProvider({ children }) {
                 diameter: ''
             },
             id: '311473',
+            quantity: 0,
             category: 'dining'
         },
         {
@@ -359,6 +376,7 @@ export function ContextProvider({ children }) {
                 diameter: ''
             },
             id: '306793',
+            quantity: 0,
             category: 'dining'
         },
         {
@@ -376,6 +394,7 @@ export function ContextProvider({ children }) {
                 diameter: ''
             },
             id: '296405',
+            quantity: 0,
             category: 'dining'
         },
         {
@@ -393,6 +412,7 @@ export function ContextProvider({ children }) {
                 diameter: ''
             },
             id: '683201',
+            quantity: 0,
             category: 'living'
         },
         {
@@ -410,6 +430,7 @@ export function ContextProvider({ children }) {
                 diameter: ''
             },
             id: '595005',
+            quantity: 0,
             category: 'living'
         },
         {
@@ -427,6 +448,7 @@ export function ContextProvider({ children }) {
                 diameter: '39.75"'
             },
             id: '151251',
+            quantity: 0,
             category: 'living'
         },
         {
@@ -444,6 +466,7 @@ export function ContextProvider({ children }) {
                 diameter: ''
             },
             id: '568267',
+            quantity: 0,
             category: 'living'
         },
         {
@@ -461,6 +484,7 @@ export function ContextProvider({ children }) {
                 diameter: ''
             },
             id: '611831',
+            quantity: 0,
             category: 'living'
         }
     ]
