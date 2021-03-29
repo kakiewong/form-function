@@ -52,7 +52,7 @@ export const AppContext = createContext();
 
 export function ContextProvider({ children }) {
     const [cart, setCart] = useState([]);
-    const [cartCount, setCartCount] = useState(0)
+
 
     const products = [
         {
@@ -492,8 +492,8 @@ export function ContextProvider({ children }) {
         <AppContext.Provider value={{
             products: products,
             cart: cart,
-            cartCount: cartCount,
-            splash: splash
+            splash: splash,
+            setCart: setCart,
         }}>
             {children}
         </AppContext.Provider>
