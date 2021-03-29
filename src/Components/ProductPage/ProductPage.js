@@ -1,11 +1,12 @@
 import React, { useContext, useState, useEffect } from 'react'
-import { useParams } from 'react-router-dom'
+import { Route, Switch, Link, useParams, useRouteMatch } from 'react-router-dom'
 import { AppContext } from '../../ContextProvider'
 import './ProductPage.css'
 import Card from '../Card/Card'
 
 function ProductPage() {
     let { category } = useParams()
+    let { url } = useRouteMatch()
     let { products, splash } = useContext(AppContext)
     const [current, setCurrent] = useState()
     const [currentSplash, setCurrentSplash] = useState()
@@ -22,18 +23,17 @@ function ProductPage() {
             <div className='productContainer'>
                 {current ?
                     current.map(item =>
-                        <Card
-                            key={item.id}
-                            name={item.name}
-                            price={item.price}
-                            details={item.details}
-                            dimensions={item.dimensions}
-                            sku={item.id}
-                            img={item.img}
-                        />)
+                        <Link className='link' to={`${url}/${item.id}`}>
+                            <Card
+                                key={item.id}
+                                name={item.name}
+                                price={item.price}
+                                img={item.img}
+                            />
+                        </Link>)
                     : <p>Loading</p>}
             </div>
-        </div>
+        </div >
     )
 }
 
