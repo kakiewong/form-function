@@ -53,7 +53,7 @@ export const AppContext = createContext();
 export function ContextProvider({ children }) {
     const [cart, setCart] = useState([]);
     const [clientInfo, setClientInfo] = useState([])
-    const [toggleForm, setToggleForm] = useState(true)
+    const [toggleForm, setToggleForm] = useState(false)
     const [isSubmit, setIsSubmit] = useState(false)
 
     const handleForm = () => {
