@@ -6,11 +6,15 @@ import './ItemPage.css'
 function ItemPage() {
     const [currentItem, setCurrentItem] = useState({})
     const [loading, setLoading] = useState(true)
+    const [mainImage, setMainImage] = useState()
     let { sku } = useParams()
     let { products, cart, setCart } = useContext(AppContext)
 
+
     useEffect(() => {
-        setCurrentItem(products.find(item => item.id === sku))
+        let item = products.find(item => item.id === sku)
+        setCurrentItem(item)
+        setMainImage(item.img.splash)
         setLoading(false)
     }, [])
 
@@ -29,15 +33,22 @@ function ItemPage() {
         }
     }
 
+    const switchImg = (e) => {
+        setMainImage(e.target.src)
+    }
+
     if (!loading) {
         return (
             <div className="itemContainer">
-                {currentItem.img.modal ? <img className="altImg" src={currentItem.img.modal} /> : ''}
-                <img className="mainImg" src={currentItem.img.splash} />
+                <div className="altHolder">
+                    {currentItem.img.modal ? <img className="altImg" src={currentItem.img.splash} alt={currentItem.name} onClick={switchImg} /> : ''}
+                    {currentItem.img.modal ? <img className="altImg" src={currentItem.img.modal} alt={currentItem.name} onClick={switchImg} /> : ''}
+                </div>
+                <img className="mainImg" src={mainImage} />
                 <div className="infoHolder">
                     <div className="nameSku">
                         <h1>{currentItem.name}</h1>
-                        <p>{currentItem.price}</p>
+                        <p>${currentItem.price}</p>
                         <p style={{ fontSize: "0.6rem" }}>{`SKU: ${currentItem.id}`}</p>
                     </div>
                     <div className="details">
