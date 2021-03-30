@@ -19,11 +19,21 @@ function App() {
           <Header />
           <Nav />
           <Switch>
-            <Route exact path="/"><Showcase /></Route>
-            <Route exact path="/shop/:category"><ProductPage /></Route>
-            <Route path="/about"><About /></Route>
-            <Route path="/careers"><Careers /></Route>
-            <Route path="/shop/:category/:sku"><ItemPage /></Route>
+            <Route exact path="/"
+            ><Showcase />
+            </Route>
+            <Route exact path="/shop/:category">
+              <ProductPage />
+            </Route>
+            <Route path="/about">
+              <About />
+            </Route>
+            <Route path="/careers">
+              <Careers />
+            </Route>
+            <Route path="/shop/:category/:sku">
+              <ItemPage />
+            </Route>
           </Switch>
           <Footer />
         </div>

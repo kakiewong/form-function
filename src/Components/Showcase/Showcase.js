@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { AppContext } from '../../ContextProvider'
 import './Showcase.css'
 import { Link } from 'react-router-dom'
 import hero from '../../FurniturePhotos/chicRoom.jpg'
@@ -11,14 +12,19 @@ import social1 from '../../FurniturePhotos/social1.jpg'
 import social2 from '../../FurniturePhotos/social2.jpg'
 import social3 from '../../FurniturePhotos/social3.jpg'
 import social4 from '../../FurniturePhotos/social4.jpg'
+import BookConsultation from '../BookConsultation/BookConsultation'
 
 function Showcase() {
+    const { toggleForm, handleForm } = useContext(AppContext)
+
     return (
         <div className='container'>
             <div className='services'>
                 <div><p>Free shipping on orders over $249</p></div>
                 <div id='divider'></div>
-                <div><p>Book a free online design consultation</p></div>
+                <div className="bookConsultation" onClick={handleForm}><p>Book a free online design consultation</p></div>
+                {toggleForm ? <div className="greyLayer" /> : null}
+                {toggleForm ? <BookConsultation /> : null}
             </div>
             <div className='main'>
                 <Link className='link' to='/shop/living'>
@@ -45,7 +51,7 @@ function Showcase() {
                     <div className='row2'>
                         <Link className='link' to='/shop/dining'>
                             <div className='pic3' style={{ backgroundImage: `url(${pic3})`, backgroundSize: "cover" }}>
-                                <p className='subText'>Dine with elegance</p>
+                                <p className='subText'>Dining made simple</p>
                             </div>
                         </Link>
                         <Link className='link' to='/shop/bath'>

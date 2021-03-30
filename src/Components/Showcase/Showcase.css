@@ -5,6 +5,33 @@
     align-items: center;
     width: 100%;
   }
+
+  .services {
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 1200px;
+    height: 75px;
+    margin-top: 10px;
+}
+
+#divider {
+    height:35%;
+    border:1px solid #707070 ;
+}
+
+  .greyLayer{
+    position: fixed;
+    top: 0;
+    width:100%;
+    height:300%;
+    background-color: #707070;
+    opacity: 0.8;
+  }
+
+  .bookConsultation:hover {
+    cursor: pointer;
+  }
   
   .main{
     display:flex;
@@ -106,16 +133,8 @@
       font-size: 0.8rem;
   }
 
-  .services {
-      display:flex;
-      justify-content: space-around;
-      align-items: center;
-      width: 1200px;
-      height: 75px;
-      margin-top: 10px;
-  }
 
-  #divider {
-      height:35%;
-      border:1px solid #707070 ;
-  }
+
+  
+
+  

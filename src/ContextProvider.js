@@ -52,6 +52,14 @@ export const AppContext = createContext();
 
 export function ContextProvider({ children }) {
     const [cart, setCart] = useState([]);
+    const [clientInfo, setClientInfo] = useState([])
+    const [toggleForm, setToggleForm] = useState(true)
+    const [isSubmit, setIsSubmit] = useState(false)
+
+    const handleForm = () => {
+        setToggleForm(!toggleForm)
+        setIsSubmit(false)
+    }
 
 
     const products = [
@@ -515,9 +523,16 @@ export function ContextProvider({ children }) {
     return (
         <AppContext.Provider value={{
             products: products,
-            cart: cart,
             splash: splash,
+            cart: cart,
             setCart: setCart,
+            clientInfo: clientInfo,
+            setClientInfo: setClientInfo,
+            toggleForm: toggleForm,
+            setToggleForm: setToggleForm,
+            handleForm: handleForm,
+            isSubmit: isSubmit,
+            setIsSubmit: setIsSubmit
         }}>
             {children}
         </AppContext.Provider>
