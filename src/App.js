@@ -8,6 +8,7 @@ import ProductPage from './Components/ProductPage/ProductPage'
 import ItemPage from './Components/ItemPage/ItemPage'
 import About from './Components/Legal/About'
 import Careers from './Components/Legal/Careers'
+import FourZeroFour from './Components/FourZeroFour/FourZeroFour'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
 
@@ -19,11 +20,24 @@ function App() {
           <Header />
           <Nav />
           <Switch>
-            <Route exact path="/"><Showcase /></Route>
-            <Route exact path="/shop/:category"><ProductPage /></Route>
-            <Route path="/about"><About /></Route>
-            <Route path="/careers"><Careers /></Route>
-            <Route path="/shop/:category/:sku"><ItemPage /></Route>
+            <Route exact path="/"
+            ><Showcase />
+            </Route>
+            <Route exact path="/shop/:category">
+              <ProductPage />
+            </Route>
+            <Route path="/about">
+              <About />
+            </Route>
+            <Route path="/careers">
+              <Careers />
+            </Route>
+            <Route path="/shop/:category/:sku">
+              <ItemPage />
+            </Route>
+            <Route>
+              <FourZeroFour />
+            </Route>
           </Switch>
           <Footer />
         </div>

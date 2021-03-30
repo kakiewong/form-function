@@ -26,7 +26,7 @@ function CartItems({ name, price, image, quantity, id }) {
             <div className="cartBody">
                 <div className="cartInfo">
                     <p>{name}</p>
-                    <p>{price}</p>
+                    <p>${price}</p>
                 </div>
                 <div className="cartButtons">
                     <button className="cartBtn" onClick={removeQuantity}>-</button>

@@ -8,6 +8,13 @@
     margin-top: 5%;
 }
 
+.altHolder {
+    display:flex;
+    flex-direction:column;
+    width:100px;
+    height:500px;
+}
+
 .mainImg {
     width: 500px;
     height: 500px;

@@ -52,12 +52,20 @@ export const AppContext = createContext();
 
 export function ContextProvider({ children }) {
     const [cart, setCart] = useState([]);
+    const [clientInfo, setClientInfo] = useState([])
+    const [toggleForm, setToggleForm] = useState(false)
+    const [isSubmit, setIsSubmit] = useState(false)
+
+    const handleForm = () => {
+        setToggleForm(!toggleForm)
+        setIsSubmit(false)
+    }
 
 
     const products = [
         {
             name: 'Set of Two Dexter Metal Frames',
-            price: '$49.99',
+            price: 49.99,
             img: {
                 splash: dexter1,
                 modal: ''
@@ -75,7 +83,7 @@ export function ContextProvider({ children }) {
         },
         {
             name: 'Riley Round Vase',
-            price: '$149.99',
+            price: 149.99,
             img: {
                 splash: riley1,
                 modal: riley2
@@ -93,7 +101,7 @@ export function ContextProvider({ children }) {
         },
         {
             name: 'Duffy Tall Vase',
-            price: '$89.99',
+            price: 89.99,
             img: {
                 splash: duffy1,
                 modal: ''
@@ -111,7 +119,7 @@ export function ContextProvider({ children }) {
         },
         {
             name: 'Bali Centerpiece Bowl',
-            price: '$219.99',
+            price: 219.99,
             img: {
                 splash: bali1,
                 modal: ''
@@ -129,7 +137,7 @@ export function ContextProvider({ children }) {
         },
         {
             name: 'Stevie Bath Tower',
-            price: '$549.99',
+            price: 549.99,
             img: {
                 splash: stevie1,
                 modal: stevie2
@@ -147,7 +155,7 @@ export function ContextProvider({ children }) {
         },
         {
             name: 'Westbrook Wall Mirror',
-            price: '$329.99',
+            price: 329.99,
             img: {
                 splash: westbrook1,
                 modal: ''
@@ -165,7 +173,7 @@ export function ContextProvider({ children }) {
         },
         {
             name: 'Butler White Bath Mat',
-            price: '$29.99',
+            price: 29.99,
             img: {
                 splash: butler1,
                 modal: ''
@@ -183,7 +191,7 @@ export function ContextProvider({ children }) {
         },
         {
             name: 'Toppin Towel Rack',
-            price: '$59.99',
+            price: 59.99,
             img: {
                 splash: toppin1,
                 modal: toppin2
@@ -201,7 +209,7 @@ export function ContextProvider({ children }) {
         },
         {
             name: 'Beal 6-Drawer Dresser',
-            price: '$1559.99',
+            price: 1559.99,
             img: {
                 splash: beal1,
                 modal: beal2
@@ -219,7 +227,7 @@ export function ContextProvider({ children }) {
         },
         {
             name: 'Harden 5-Drawer Chest',
-            price: '$759.99',
+            price: 759.99,
             img: {
                 splash: harden1,
                 modal: harden2
@@ -237,7 +245,7 @@ export function ContextProvider({ children }) {
         },
         {
             name: 'Leonard Bed',
-            price: '$2259.99',
+            price: 2259.99,
             img: {
                 splash: leonard1,
                 modal: ''
@@ -255,7 +263,7 @@ export function ContextProvider({ children }) {
         },
         {
             name: 'Randle Bed',
-            price: '$1499.99',
+            price: 1499.99,
             img: {
                 splash: randle1,
                 modal: randle2
@@ -273,7 +281,7 @@ export function ContextProvider({ children }) {
         },
         {
             name: 'James Nightstand',
-            price: '$399.99',
+            price: 399.99,
             img: {
                 splash: james1,
                 modal: james2
@@ -291,7 +299,7 @@ export function ContextProvider({ children }) {
         },
         {
             name: 'Kelly Dining Chair',
-            price: '$129.99',
+            price: 129.99,
             img: {
                 splash: kelly1,
                 modal: kelly2
@@ -309,7 +317,7 @@ export function ContextProvider({ children }) {
         },
         {
             name: 'Morris Dining Table',
-            price: '$999.99',
+            price: 999.99,
             img: {
                 splash: morris1,
                 modal: morris2
@@ -327,7 +335,7 @@ export function ContextProvider({ children }) {
         },
         {
             name: 'Leslie Dining Table',
-            price: '$2999.99',
+            price: 2999.99,
             img: {
                 splash: leslie1,
                 modal: leslie2
@@ -345,7 +353,7 @@ export function ContextProvider({ children }) {
         },
         {
             name: 'Mccollum Dining Chair',
-            price: '$599.99',
+            price: 599.99,
             img: {
                 splash: mccollum1,
                 modal: mccollum2
@@ -363,7 +371,7 @@ export function ContextProvider({ children }) {
         },
         {
             name: 'Candace Dining Chair',
-            price: '$99.99',
+            price: 99.99,
             img: {
                 splash: candace1,
                 modal: candace2
@@ -381,7 +389,7 @@ export function ContextProvider({ children }) {
         },
         {
             name: 'Sue Dining Table',
-            price: '$2299.99',
+            price: 2299.99,
             img: {
                 splash: sue1,
                 modal: sue2
@@ -399,7 +407,7 @@ export function ContextProvider({ children }) {
         },
         {
             name: 'Clyde Side Table',
-            price: '$479.99',
+            price: 479.99,
             img: {
                 splash: clyde1,
                 modal: clyde2
@@ -417,7 +425,7 @@ export function ContextProvider({ children }) {
         },
         {
             name: 'Irving Coffee Table',
-            price: '$1099.99',
+            price: 1099.99,
             img: {
                 splash: irving1,
                 modal: irving2
@@ -435,7 +443,7 @@ export function ContextProvider({ children }) {
         },
         {
             name: 'Earl Coffee Table',
-            price: '$1099.99',
+            price: 1099.99,
             img: {
                 splash: earl1,
                 modal: earl2
@@ -453,7 +461,7 @@ export function ContextProvider({ children }) {
         },
         {
             name: 'DeMar Sofa',
-            price: '$3099.99',
+            price: 3099.99,
             img: {
                 splash: demar1,
                 modal: demar2
@@ -471,7 +479,7 @@ export function ContextProvider({ children }) {
         },
         {
             name: 'Pascal Chair',
-            price: '$1499.99',
+            price: 1499.99,
             img: {
                 splash: pascal1,
                 modal: pascal2
@@ -515,9 +523,16 @@ export function ContextProvider({ children }) {
     return (
         <AppContext.Provider value={{
             products: products,
-            cart: cart,
             splash: splash,
+            cart: cart,
             setCart: setCart,
+            clientInfo: clientInfo,
+            setClientInfo: setClientInfo,
+            toggleForm: toggleForm,
+            setToggleForm: setToggleForm,
+            handleForm: handleForm,
+            isSubmit: isSubmit,
+            setIsSubmit: setIsSubmit
         }}>
             {children}
         </AppContext.Provider>

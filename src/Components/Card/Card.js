@@ -6,7 +6,7 @@ function Card({ name, price, sku, details, dimensions, img }) {
         <div className='card'>
             <h3>{name}</h3>
             <img className='mainPic' src={img.splash} />
-            <p>{price}</p>
+            <p>${price}</p>
         </div>
 
     )
