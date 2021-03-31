@@ -1,5 +1,5 @@
 import React, { useContext, useState, useEffect } from 'react'
-import { Route, Switch, Link, useParams, useRouteMatch } from 'react-router-dom'
+import { Link, useParams, useRouteMatch } from 'react-router-dom'
 import { AppContext } from '../../ContextProvider'
 import './ProductPage.css'
 import Card from '../Card/Card'
@@ -19,7 +19,7 @@ function ProductPage() {
     return (
         <div className='productMain'>
             <h1>{category}</h1>
-            {currentSplash ? <div className='splash'><img src={currentSplash[0].img} /></div> : ''}
+            {currentSplash ? <div className='splash'><img src={currentSplash[0].img} alt='' /></div> : ''}
             <div className='productContainer'>
                 {current ?
                     current.map(item =>
