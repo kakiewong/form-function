@@ -17,7 +17,7 @@ function Header() {
 
     return (
         <div id='header'>
-            <Link className='link' to='/'><h1>FORM &amp; FUNCTION</h1></Link>
+            <Link className='link' to='/'><h1 className='logoText'>FORM &amp; FUNCTION</h1></Link>
             <div id='cart'>
                 <p>{totalItems}</p>
                 <button onClick={handleClick}><i className="im im-shopping-cart"></i></button>

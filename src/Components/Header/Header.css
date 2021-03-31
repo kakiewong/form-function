@@ -40,3 +40,18 @@
 .hide {
     display: none
 }
+
+@media(max-width: 415px){
+    #header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        width: 100%;
+        height: 75px;
+        border-bottom: 7px solid #707070 ;
+    }
+
+    .logoText {
+        font-size: 1.5rem;
+    }
+}

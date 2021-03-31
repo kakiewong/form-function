@@ -121,7 +121,7 @@ function BookConsultation() {
                 </span>
                 <button
                     type='submit'
-                    className='submit-btn'
+                    className='cardBtn'
                 >Submit
                 </button>
             </form>
