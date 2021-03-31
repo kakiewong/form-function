@@ -27,3 +27,20 @@
     width: 200px;
     justify-content: space-evenly;
 }
+
+@media(max-width: 415px){
+    .footer > h2 {
+        font-size: 1.2rem;
+    }
+
+    .footerLinks{
+        display:flex;
+        gap: 10px;
+        font-size: 0.6rem;
+        list-style: none;
+    }
+
+    .socialIcons > i {
+        font-size: 1.2rem;
+    }
+}

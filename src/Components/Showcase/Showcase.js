@@ -62,7 +62,7 @@ function Showcase() {
                     </div>
                 </div>
             </div>
-            <Link className='link' to='/shop/living'>
+            <Link className='link' to='/shop/living/568267'>
                 <div className='rotatingFeature' style={{ backgroundImage: `url(${monthly})`, backgroundSize: "cover", backgroundPosition: "bottom" }}>
                     <h1>Meet DeMar</h1>
                     <p>Say hi to the newest member of our collection</p>
